@@ -10,7 +10,7 @@ describe('carbon footprint calculator home', () => {
     const zipcodeNotFound = '#invalidZip';
     const useDefaultZipcode = '.default-zip';
 
-    beforeEach(() => {
+    before(() => {
       cy.visit('https://www3.epa.gov/carbon-footprint-calculator/')
     })
   
@@ -46,7 +46,7 @@ describe('carbon footprint calculator home', () => {
         cy.get(invalidZipcode)
             .should('have.text', 'Please enter a valid five-digit ZIP Code.');
     });
-  
+
     it('invalid zipcode', () => {
         cy.get(peopleInput)
             .type(3);
@@ -59,6 +59,8 @@ describe('carbon footprint calculator home', () => {
     
         cy.get(invalidZipcode)
             .should('have.text', 'Please enter a valid five-digit ZIP Code.');
+
+        cy.reload();
     });
 
     it('zipcode not found', () => {
