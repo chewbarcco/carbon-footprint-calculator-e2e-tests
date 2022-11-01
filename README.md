@@ -8,9 +8,9 @@ This repository is an automation exercise for tests based on the web platform [E
 For this test approach, I defined the average US energy consumption as test data. And I defined some test cases in two scenarios.
 In the first scenario, I perform some validations on the home, in the people and zip code fields. Following main and exception flow to validate error messages. In the second scenario, I carry out a normal calculation flow until the end, validating the sum of the pre-defined values ​​used in the test.
 
-Some acceptance criteria were described in gherkin language, just for exemplification and can be found in the [acceptance-criteria]() folder in the project root.
+Some acceptance criteria were described in gherkin language, just for exemplification and can be found in the [acceptance-criteria](https://github.com/chewbarcco/carbon-footprint-calculator-e2e-tests/blob/feature/carbon-calculator-e2e-tests/cypress/acceptance-criteria/home-scenario.txt) folder in the project root.
 
-Some bugs found were described in detail in how to reproduce them just to exemplify. They can be found in the [bugs]() folder in the project root.
+Some bugs found were described in detail in how to reproduce them just to exemplify. They can be found in the [bugs](https://github.com/chewbarcco/carbon-footprint-calculator-e2e-tests/blob/feature/carbon-calculator-e2e-tests/cypress/bugs/bugs.txt) folder in the project root.
 
 ## Test automation
 
