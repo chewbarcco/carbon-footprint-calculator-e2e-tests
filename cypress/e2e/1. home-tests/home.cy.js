@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('carbon footprint calculator home', () => {
+describe('Carbon Footprint Calculator home', () => {
 
     const peopleInput = '#ppl-in-household-input';
     const zipcodeInput = '#zip-code-input';
@@ -14,7 +14,7 @@ describe('carbon footprint calculator home', () => {
       cy.visit('https://www3.epa.gov/carbon-footprint-calculator/')
     })
   
-    it('empty number of people in household', () => {
+    it('should return error message when empty number of people in household', () => {
         cy.get(zipcodeInput)
             .type(93101);
       
@@ -25,7 +25,7 @@ describe('carbon footprint calculator home', () => {
             .should('have.text', 'Please enter a valid number of people.');
     });
   
-    it('empty zipcode', () => {
+    it('should return error message when empty zip code', () => {
         cy.get(peopleInput)
             .type(3);
         
@@ -36,7 +36,7 @@ describe('carbon footprint calculator home', () => {
             .should('have.text', 'Please enter a valid five-digit ZIP Code.');
     });
   
-    it('number of people and zipcode both empty', () => {
+    it('should return error message when number of people and zip code are both empty', () => {
         cy.get(getstartedButton)
             .click();
     
@@ -47,7 +47,7 @@ describe('carbon footprint calculator home', () => {
             .should('have.text', 'Please enter a valid five-digit ZIP Code.');
     });
 
-    it('invalid zipcode', () => {
+    it('should return error message when type invalid zip code', () => {
         cy.get(peopleInput)
             .type(3);
 
@@ -63,7 +63,7 @@ describe('carbon footprint calculator home', () => {
         cy.reload();
     });
 
-    it('zipcode not found', () => {
+    it('should return error message when a zip code is not found', () => {
         cy.get(peopleInput)
             .type(3);
 

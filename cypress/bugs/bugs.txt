@@ -1,0 +1,15 @@
+BUG 001:
+    TITLE: Unable to use browser back button to return home.
+    DESCRIPTION: The user can get confused if he needs to return to home and type again the number of people or zip code.
+    The browser not allow the user to go back.
+    Theres a small button called "Start Over", that allows to start the flow again. But is too small, and can cause mislead.
+    STEPS:
+        1. Access the Carbon Footprint Calculator web page;
+        2. Type a valid number of people household;
+        3. Type a valid zip code number;
+        4. Click on 'Get Started' button, and you will be redirect to Home Energy form;
+        5. Click on browser 'back' button, and see that nothing happens.
+
+    Possible solution: Correct the browser back button behavior. Or change the layout and maybe position of the 'Start Over' button, to be more visible.
+    
+
