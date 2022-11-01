@@ -1,11 +1,16 @@
 # Carbon Footprint Calculator E2E Tests
 
 This repository is an automation exercise for tests based on the web platform [EPA’s Carbon Footprint Calculator](https://www3.epa.gov/carbon-footprint-calculator/).
+- Note: this is a simple, clear, and concise test automation approach for UI.
 
 ## Test approach, test scenarios and test data
 
 For this test approach, I defined the average US energy consumption as test data. And I defined some test cases in two scenarios.
 In the first scenario, I perform some validations on the home, in the people and zip code fields. Following main and exception flow to validate error messages. In the second scenario, I carry out a normal calculation flow until the end, validating the sum of the pre-defined values ​​used in the test.
+
+Some acceptance criteria were described in gherkin language, just for exemplification and can be found in the [acceptance-criteria]() folder in the project root.
+
+Some bugs found were described in detail in how to reproduce them just to exemplify. They can be found in the [bugs]() folder in the project root.
 
 ## Test automation
 
@@ -37,5 +42,5 @@ npm run cypress
 - To execute the test headless
 
 ```bash
-npm run test
+npm run tests
 ```

@@ -1,0 +1,13 @@
+Scenario: I want to start calculate my carbon footprint
+    GIVEN I access the Carbon Footprint Calculator
+    WHEN I left empty the number of people in my household
+    AND I type a valid zip code
+    AND I click on Get Started button
+    THEN I see the error message 'Please enter a valid number of people.'
+
+    
+    GIVEN I access the Carbon Footprint Calculator
+    WHEN I type the number of people in my household
+    AND I left the zip code empty
+    AND I click on Get Started button
+    THEN I see the error message 'Please enter a valid five-digit ZIP Code.'
